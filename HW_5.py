@@ -40,6 +40,7 @@ class Square(Figure):
         return 'i am Square'
 
     def get_area(self):
+        print('Test1')
         return f'Area of square is {self.__side ** 2}'
 
 
