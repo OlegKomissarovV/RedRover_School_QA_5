@@ -47,6 +47,7 @@ if __name__ == '__main__':
     f = Square('my square', 5)
     p = Rectangle('my rectangle', 1, 2)
     f.set_side(10)
+    print('Test')
     p.set_side(10, 2)
     figures = [f, p]
     for figure in figures:
