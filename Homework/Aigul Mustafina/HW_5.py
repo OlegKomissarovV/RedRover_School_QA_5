@@ -1,45 +1,53 @@
 class Figure:
-    def __init__(self, name) -> None:
+    def __init__(self, name: str) -> None:
         self.name = name
 
 
 class Rectangle(Figure):
-    def __init__(self, name,  side_a, side_b) -> None:
+    def __init__(self, name: str,  side_a: int, side_b: int) -> None:
         super().__init__(name)
         self.__side_a = side_a
         self.__side_b = side_b
 
-    def get_side(self):
+    def get_side(self) -> str:
+        """gets side rectangle"""
         return f'Side A is {self.__side_a} side B is {self.__side_b}'
 
-    def set_side(self, new_a, new_b):
+    def set_side(self, new_a: int, new_b: int) -> None:
+        """sets side rectangle"""
         print(f'New side A is {new_a} new side B is {new_b}')
         self.__side_a = new_a
         self.__side_b = new_b
 
-    def get_area(self):
+    def get_area(self) -> str:
+        """gets area rectangle"""
         return f'Area of rect is {self.__side_a * self.__side_b}'
 
-    def info(self):
+    def info(self) -> str:
+        """gets info rectangle"""
         return 'i am Rectangle'
 
 
 class Square(Figure):
-    def __init__(self, name,  side) -> None:
+    def __init__(self, name: str,  side: int) -> None:
         super().__init__(name)
         self.__side = side
 
-    def get_side(self):
+    def get_side(self) -> str:
+        """gets side square"""
         return f'Side A is {self.__side}'
 
-    def set_side(self, new_side):
+    def set_side(self, new_side: int) -> None:
+        """sets side square"""
         print(f'New side A is {new_side}')
         self.__side = new_side
 
-    def info(self):
+    def info(self) -> str:
+        """gets info square"""
         return 'i am Square'
 
-    def get_area(self):
+    def get_area(self) -> str:
+        """gets area square"""
         return f'Area of square is {self.__side ** 2}'
 
 
@@ -47,7 +55,6 @@ if __name__ == '__main__':
     f = Square('my square', 5)
     p = Rectangle('my rectangle', 1, 2)
     f.set_side(10)
-    print('Test')
     p.set_side(10, 2)
     figures: list = [f, p]
     for figure in figures:
