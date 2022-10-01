@@ -49,7 +49,7 @@ if __name__ == '__main__':
     f.set_side(10)
     print('Test')
     p.set_side(10, 2)
-    figures = [f, p]
+    figures: list = [f, p]
     for figure in figures:
         print(figure.info())
         print(figure.get_side())
