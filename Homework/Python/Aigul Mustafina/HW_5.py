@@ -52,11 +52,11 @@ class Square(Figure):
 
 
 if __name__ == '__main__':
-    f = Square('my square', 5)
-    p = Rectangle('my rectangle', 1, 2)
-    f.set_side(10)
-    p.set_side(10, 2)
-    figures = [f, p]
+    square = Square('my square', 5)
+    rectangle = Rectangle('my rectangle', 1, 2)
+    square.set_side(10)
+    rectangle.set_side(10, 2)
+    figures = [square, rectangle]
     for figure in figures:
         print(figure.info())
         print(figure.get_side())
