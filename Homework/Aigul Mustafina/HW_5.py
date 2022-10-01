@@ -4,7 +4,7 @@ class Figure:
 
 
 class Rectangle(Figure):
-    def __init__(self, name: str,  side_a: int, side_b: int) -> None:
+    def __init__(self, name: str, side_a: int, side_b: int) -> None:
         super().__init__(name)
         self.__side_a = side_a
         self.__side_b = side_b
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     p = Rectangle('my rectangle', 1, 2)
     f.set_side(10)
     p.set_side(10, 2)
-    figures: list = [f, p]
+    figures = [f, p]
     for figure in figures:
         print(figure.info())
         print(figure.get_side())
